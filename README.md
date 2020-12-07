@@ -3,10 +3,12 @@ microcDB is a light weight NoSQL database for mostly resource limited embedded/I
 
 The most disrupting feature of microcDB is it has a "Hard Index". As microcDB directly interfaces with raw memory without filesystem so we can give a new type of index for fast DB operations. This is a new type of index which will directly point to memory address of a JSON object which needs to be indexed. The data_type will be :
 
+```
 typedef struct {
 uint8_t* startAddressOfObject;
 uint8_t* endAddressOfObject;
 }hard_index;
+```
 
 This is not yet implemented nor its algorithm is designed but will do it soon once all CRUD operations are implemented.
 
